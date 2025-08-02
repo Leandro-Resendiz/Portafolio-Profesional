@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome AutoPilot | Iker Leandro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #F5F6FA;
+      overflow-x: hidden;
+      position: relative;
+    }
+    header {
+      text-align: center;
+      margin: clamp(3rem, 8vw, 5rem) 1rem 2rem;
+      padding: 0 1rem;
+    }
+    header h1 {
+      color: #00FFF0;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+    header p {
+      color: #C0F0F0;
+      max-width: 700px;
+      margin: 1rem auto 0;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+  
+  section.impacto {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid #00FFF0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+section.impacto.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: rgba(255,255,255,0.05);
+      padding: 2rem clamp(1rem, 4vw, 3rem);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.7s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      color: #00FFF0;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    section p {
+      line-height: 1.6;
+      color: #D1F2F2;
+      font-size: clamp(0.95rem, 3vw, 1.05rem);
+    }
+    .impacto {
+      background: rgba(0,255,240,0.05);
+      border-left: 4px solid #00FFF0;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #FF6B35;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem 0.5rem 0;
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+    .btn:hover {
+      background: #e85727;
+      transform: translateY(-2px);
+    }
+    .ficha {
+      background: rgba(255,255,255,0.03);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-size: clamp(0.85rem, 3vw, 0.95rem);
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      margin: 4rem 0 2rem;
+      font-size: clamp(0.7rem, 3vw, 0.8rem);
+    }
+    .floating-shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0,255,240,0.08);
+      filter: blur(60px);
+      animation: float 20s ease-in-out infinite alternate;
+    }
+    .floating-shape.one {
+      width: 200px; height: 200px; top: 20%; left: -100px;
+      animation-delay: 0s;
+    }
+    .floating-shape.two {
+      width: 150px; height: 150px; bottom: 15%; right: -80px;
+      animation-delay: 5s;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0) rotate(0deg);}
+      100% { transform: translateY(-50px) translateX(50px) rotate(360deg);}
+    }
+    iframe.demo {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,240,0.1);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        margin: 2rem 1rem;
+      }
+      .floating-shape.one,
+      .floating-shape.two {
+        display: none; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating-shape one"></div>
+  <div class="floating-shape two"></div>
+
+  <header>
+    <h1>🔁 Welcome AutoPilot</h1>
+    <p>Registro inteligente de clientes desde sitio web con Airtable + WhatsApp</p>
+  </header>
+    <section>
+    <h2>🔧 Descripción</h2>
+    <p>Welcome AutoPilot es una solución automatizada diseñada para 
+      optimizar la recepción de nuevos clientes. Integra un formulario web, 
+      una base de datos en Airtable y una alerta instantánea vía WhatsApp. 
+      Todo el proceso sucede en tiempo real, 
+      facilitando la gestión inmediata y organizada de leads.</p>
+  </section>
+
+  <section>
+    <h2>📌 Problema</h2>
+    <p>Muchos procesos de captación de clientes sufren de retrasos, duplicación de datos o pérdida de oportunidades por la falta de respuesta inmediata. Este proyecto resuelve esas ineficiencias mediante automatización completa desde el primer contacto.</p>
+  </section>
+
+  <section>
+    <h2>💡 Solución</h2>
+    <p>
+    El usuario llena un formulario web con sus datos.
+    Zapier conecta el formulario con una base de datos en Airtable, registrando automáticamente la entrada.
+    Simultáneamente, Zapier dispara una notificación de WhatsApp al equipo de atención indicando que hay un nuevo lead.
+
+</p>
+  </section>
+
+ 
+<div class="contenedor-impacto">
+  <section class="impacto">
+    <h2>🚀 Impacto</h2>
+    <p>✅ +80% de ahorro de tiempo<br>
+    ✅ Alerta instantánea y profesional<br>
+    ✅ Datos centralizados y actualizados</p>
+  </section>
+</div>
+
+  <section>
+    <h2>📂 Ficha técnica</h2>
+    <div class="ficha">
+      - Herramientas: Zapier, Airtable, HTML, Twilight CSS, JavaScript<br>
+      - Implementación: 2 días<br>
+      - Funcionalidades: Captura de datos, envío automático, base organizada.
+    </div>
+  </section>
+
+  <section>
+    <h2>📺 Demo en vivo</h2>
+    <iframe src="https://portafolio-leandro-resendiz.vercel.app/proyectos/Demo.html" class="demo"></iframe>
+    <div style="text-align: center;">
+      <a href="/index.html#contacto" class="btn">Solicitar uno similar</a>
+      <a href="/index.html" class="btn">Volver al Portafolio</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Iker Leandro Reséndiz · Welcome AutoPilot
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>

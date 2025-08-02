@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignia | Iker Leandro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #F5F6FA;
+      overflow-x: hidden;
+      position: relative;
+    }
+    header {
+      text-align: center;
+      margin: clamp(3rem, 8vw, 5rem) 1rem 2rem;
+      padding: 0 1rem;
+    }
+    header h1 {
+      color: #00FFF0;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+    header p {
+      color: #C0F0F0;
+      max-width: 700px;
+      margin: 1rem auto 0;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+  
+  section.impacto {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid #00FFF0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+section.impacto.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: rgba(255,255,255,0.05);
+      padding: 2rem clamp(1rem, 4vw, 3rem);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.7s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      text-align: center;
+      color: #00FFF0;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+    section p {
+      line-height: 1.6;
+      color: #D1F2F2;
+      font-size: clamp(0.95rem, 3vw, 1.05rem);
+    }
+    .impacto {
+      background: rgba(0,255,240,0.05);
+      border-left: 4px solid #00FFF0;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #FF6B35;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem 0.5rem 0;
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+    .btn:hover {
+      background: #e85727;
+      transform: translateY(-2px);
+    }
+    .ficha {
+      background: rgba(255,255,255,0.03);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-size: clamp(0.85rem, 3vw, 0.95rem);
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      margin: 4rem 0 2rem;
+      font-size: clamp(0.7rem, 3vw, 0.8rem);
+    }
+    .floating-shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0,255,240,0.08);
+      filter: blur(60px);
+      animation: float 20s ease-in-out infinite alternate;
+    }
+    .floating-shape.one {
+      width: 200px; height: 200px; top: 20%; left: -100px;
+      animation-delay: 0s;
+    }
+    .floating-shape.two {
+      width: 150px; height: 150px; bottom: 15%; right: -80px;
+      animation-delay: 5s;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0) rotate(0deg);}
+      100% { transform: translateY(-50px) translateX(50px) rotate(360deg);}
+    }
+    iframe.demo {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,240,0.1);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        margin: 2rem 1rem;
+      }
+      .floating-shape.one,
+      .floating-shape.two {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating-shape one"></div>
+  <div class="floating-shape two"></div>
+
+  <header>
+    <img src="/image/logo-assignia-transparente.png" alt="">
+    <p>Un sistema autónomo que conecta clientes, administración y técnicos de forma automática, asegurando trazabilidad total, evidencias en tiempo real y reportes instantáneos sin intervención manual.</p>
+  </header>
+
+  <section>
+    <h2>📌 Dolor de negocio</h2>
+    <p>En servicios de campo, la información se dispersa: registros manuales incompletos, técnicos que no reportan evidencias, clientes que desconocen el estatus y administración que pierde tiempo coordinando por llamadas y correos.</p>
+    <p>Esto genera pérdidas económicas, baja confianza y poca escalabilidad operativa.</p>  
+  </section>
+
+  <section>
+      <h2>💡 Cómo funciona Assignia</h2>
+    <p>1️⃣ El cliente llena un formulario web para solicitar información o agendar un servicio.<br>
+    2️⃣ El sistema envía una alerta automática a ventas y administración.<br>
+    3️⃣ El equipo cierra la venta y desde el panel asigna al técnico ideal.<br>
+    4️⃣ El técnico recibe una alerta con enlace personalizado con datos del cliente, ruta y evidencias requeridas.<br>
+    5️⃣ El cliente recibe un enlace para monitorear su servicio en tiempo real.<br>
+    6️⃣ Al finalizar, el técnico llena el formulario de cierre, sube fotos y automaticamente actualiza el estatus.<br>
+    7️⃣ El cliente y administración reciben un PDF detallado del servicio realizado.</p>
+  
+  </section>
+
+ 
+<div class="contenedor-impacto">
+  <section class="impacto">
+    <h2>🚀 Impacto real</h2>
+    <p>✔️ Cero pérdida de información<br>
+    ✔️ Supervisión en tiempo real<br>
+    ✔️ Evidencias fotográficas centralizadas<br>
+    ✔️ Clientes informados y satisfechos<br>
+    ✔️ Reducción de llamadas, correos y tareas repetitivas<br>
+    ✔️ Reportes PDF listos para auditorías</p>
+  </section>
+</div>
+
+  <section>
+    <h2>📂 Ficha técnica</h2>
+    <div class="ficha">
+      - Herramientas: Make, Notion/Airtable, Formularios HTML, JavaScript, API PDF<br>
+      - Roles: Cliente, Administrativo, Técnico<br>
+      - Integración: Notificaciones automáticas por correo y Telegram<br>
+      - Tiempo de entrega: 14 días<br>
+      - Casos de uso: Instalaciones, mantenimientos, reparaciones, auditorías en campo.
+    </div>
+
+  </section>
+
+  
+  <section>
+    <h2>🔐 Confidencialidad</h2>
+    <p>Por acuerdos de confidencialidad, solo se comparte un extracto del manual de usuario para demostrar la estructura, módulos y flujos principales. Los detalles de clientes y procesos internos se mantienen protegidos.</p>
+  </section>
+
+  <section>
+    <h2>📄 Manual Público</h2>
+    <p>Consulta la versión resumida con portada, índice y estructura general de Assignia.</p>
+    <div style="text-align: center;">
+      <a href="/Docs/Manual General de Usuario - Assignia.pdf" class="btn" target="_blank">Ver Manual PDF</a>
+    </div>
+  </section>
+
+  <section style="text-align: center;">
+      <a href="/index.html#contacto" class="btn">Solicitar uno similar</a>
+      <a href="/index.html" class="btn">Volver al Portafolio</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Iker Leandro Reséndiz · Assignia
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>
