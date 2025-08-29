@@ -48,6 +48,24 @@
       background-color: #e85727; 
     }
     
+
+        .topbar {
+      background: rgba(0,0,0,0.18);
+      padding: 0.6rem 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .topbar-inner{ display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:auto; flex-wrap:wrap; gap:1rem; }
+    .top-left strong{ color:#fff; font-size:1rem; display:block; }
+    .role{ color:#CFFCF3; font-size:0.9rem; margin-top:2px; }
+    .top-right{ display:flex; gap:1rem; align-items:center; }
+    .avail{ color:#00FFF0; font-weight:600; font-size:0.9rem; }
+    .cv-btn.btn{ background:#00FFF0; color:#000; padding:0.5rem 1rem; border-radius:8px; font-weight:600; }
+    .hero{ padding:3rem 2rem 4rem 2rem; text-align:center; }
+    .hero h1{ font-size:2.2rem; color:#00F0E0; }
+    .hero p{ color:#D1F2F2; max-width:900px; margin:auto; font-size:1rem; }
+
+
+
     section {
       padding: 4rem 2rem;
       max-width: 1100px;
@@ -233,6 +251,9 @@
 
     
        @media (max-width: 768px){
+        #sobre-mi{
+          margin-top: -8.5rem;
+        }
       section{
         margin-bottom: -80px;   }
         .conta{
@@ -241,7 +262,8 @@
         }  
         .cta{
           margin-top: 80px;
-          margin-bottom: 10px;        }
+          margin-bottom: 10px;        
+        }
     }
     
   </style>
@@ -252,10 +274,27 @@
     <div class="cube"></div><div class="cube"></div>
   </div>
   <header>
-    <h1>Automatizo procesos y desarrollo sistemas web personalizados</h1>
-    <p>Especialista en Make, Notion, Zapier, Airtable y código para flujos eficientes.</p>
-    <a href="#proyectos" class="btn">Ver proyectos</a>
-  </header>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="top-left">
+        <strong>Iker Leandro Reséndiz Ávila</strong>
+        <div class="role">Auxiliar Administrativo • Capturista • Programador Jr.</div>
+      </div>
+      <div class="top-right">
+        <div class="avail">Disponible para entrevistas · Inicio inmediato</div>
+        <!-- sube tu CV a la raíz pública y ajusta el href -->
+        <a class="cv-btn btn" href="/Docs/CV-IkerLeandroResendiz.pdf" download>Descargar CV</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Automatizo procesos y desarrollo sistemas web prácticos</h1>
+    <p>Especialista en Make, Notion, Zapier, Airtable y desarrollo web básico. Me integro desde el primer día para optimizar procesos administrativos y reportes.</p>
+      <a href="https://wa.me/5215614423799" class="btn">Contactar (WhatsApp)</a> </br>
+      <a href="#proyectos" class="btn">Ver Proyectos</a> </div>
+     </div>
+</header>
   <section id="sobre-mi">
     <h2>¿Quién soy?</h2>
     <p>Soy Iker Leandro Resendiz, egresado de Ingeniería en Tecnologias de la Información y Comunicaciones con enfoque en automatización y desarrollo web. Combino estrategia y herramientas modernas para optimizar procesos reales.</p>
@@ -267,47 +306,60 @@
     <div class="servicio">💻 <strong>Desarrollo web funcional</strong><br/>Formularios, dashboards, landings y sistemas internos conectados.</div>
   </section>
 
-<section id="proyectos">
+  <section id="proyectos">
   <h2>Proyectos recientes</h2>
   <div class="proyectos-grid">
     <div class="proyecto">
-      <h3>🔁 Welcome AutoPilot</h3>
-      <p>Registro inteligente de clientes usando Zapier, Airtable y WhatsApp</p>
-      <a href="proyectos/Welcome-Autopilot.html" class="btn">Ver demo</a>
-    </div>
-    <div class="proyecto">
-      <h3>🔗 Smart Sync Hub</h3>
-      <p>Sistema de sincronización inteligente entre formularios, Notion y CRM. Automatiza el registro, actualización y organización de datos en tiempo real, sin intervención manual.</p>
-      <a href="proyectos/SmartSyncHub.html" class="btn">Ver demo</a>
-    </div>
-    <div class="proyecto">
-      <img src="image/LogoAssignia.png" alt="Assignia Logo" >
+      <img src="image/LogoAssignia.png" alt="Assignia Logo">
       <h3>Assignia</h3>
-      <p>Sistema autónomo que asigna técnicos y envía alertas, seguimiento a los clientes y reportes PDF de servicios.</p>
+      <p>Sistema autónomo para asignación de técnicos, seguimiento y generación de reportes PDF automáticos.</p>
+      <p><strong>Herramientas:</strong> Make, Airtable, APIs, PDF generation</p>
+      <p><strong>Impacto:</strong> Mejor trazabilidad y reducción de errores manuales en procesos de servicio.</p>
       <a href="proyectos/Assignia.html" class="btn">Ver demo</a>
     </div>
+
     <div class="proyecto">
-      <h3>🏭 Midela Representaciones</h3>
-      <p>Sitio web claro y funcional para empresa B2B industrial.</p>
+      <h3>Welcome AutoPilot</h3>
+      <p>Registro inteligente de clientes usando Zapier, Airtable y WhatsApp para captación y seguimiento.</p>
+      <p><strong>Herramientas:</strong> Zapier, Airtable, Formularios, WhatsApp</p>
+      <p><strong>Impacto:</strong> Flujo de onboarding automático que reemplaza tareas manuales.</p>
+      <a href="proyectos/Welcome-Autopilot.html" class="btn">Ver demo</a>
+    </div>
+
+    <div class="proyecto">
+      <h3>Smart Sync Hub</h3>
+      <p>Sincronización entre formularios, Notion y CRM para mantener datos centralizados y actualizados.</p>
+      <p><strong>Herramientas:</strong> Notion, APIs, JavaScript</p>
+      <a href="proyectos/SmartSyncHub.html" class="btn">Ver demo</a>
+    </div>
+
+    <div class="proyecto">
+      <h3>Midela Representaciones</h3>
+      <p>Sitio web B2B con enfoque en claridad de producto y contacto comercial.</p>
+      <p><strong>Herramientas:</strong> HTML, CSS, estructura responsive</p>
       <a href="proyectos/MidelaR.html" class="btn">Visitar sitio</a>
     </div>
+
     <div class="proyecto">
-      <h3>🔒 Generador de Contraseñas</h3>
-      <p>App Django para generar contraseñas seguras, en PythonAnywhere.</p>
+      <h3>Generador de Contraseñas</h3>
+      <p>App Django desplegada en PythonAnywhere para generación de contraseñas seguras.</p>
       <a href="https://ikerleandrore.pythonanywhere.com" class="btn">Ver app</a>
     </div>
+
     <div class="proyecto">
-      <h3>🌌 Portafolio Futurista</h3>
-      <p>Universo digital que combina HTML, CSS y animaciones.</p>
-      <a href="proyectos/PortafolioFuturista.html" class="btn">Visitar sitio</a>
-    </div>
-    <div class="proyecto">
-      <h3>🐍 Scripts Python</h3>
-      <p>Scripts reales en mi GitHub: scraping, automatización y más.</p>
+      <h3>Scripts Python (GitHub)</h3>
+      <p>Automatización, scraping y utilidades en repositorios públicos.</p>
       <a href="https://github.com/Leandro-Resendiz?tab=repositories" class="btn" target="_blank">Ver GitHub</a>
+    </div>
+
+    <div class="proyecto">
+      <h3>Portafolio creativo</h3>
+      <p>Proyectos experimentales y animaciones (sección creativa, no laboral).</p>
+      <a href="proyectos/PortafolioFuturista.html" class="btn">Visitar creativo</a>
     </div>
   </div>
 </section>
+
 
   <section id="proceso">
     <h2>Mi proceso de trabajo</h2>
@@ -338,7 +390,7 @@
       <div class="conta">  
         <p><strong> <img src="/image/ico/whatsapp(1).png" width="30px" alt=""> &nbsp;  WhatsApp: &nbsp;</strong> <a href="https://wa.me/5215614423799" style="color:#00FFF0;"> Envíame un mensaje</a></p>
         <p><strong><img src="/image/ico/telefono-inteligente.png" width="30px" alt=""> &nbsp;Teléfono: &nbsp;</strong> <a href="tel:5614423799" style="color:#00FFF0;"> 56 1442-3799</a></p>
-        <p><strong><img src="/image/ico/correo-de-propaganda.png" width="30px" alt=""> &nbsp;E-mail:&nbsp; </strong> <a href="malito:resendizikerleandro@gmail.com?subject=Quiero%20contactarte&body=Hola%20Iker," style="color:#00FFF0;">resendizikerleandro@gmail.com</a> </p>
+        <p><strong><img src="/image/ico/correo-de-propaganda.png" width="30px" alt=""> &nbsp;E-mail:&nbsp; </strong> <a href="mailto:resendizikerleandro@gmail.com?subject=Contacto%20desde%20portafolio&body=Hola%20Iker," style="color:#00FFF0;">resendizikerleandro@gmail.com</a> </p>
       </div>  
     
     
